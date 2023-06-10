@@ -3,10 +3,12 @@
 import Image from "next/image";
 import React from "react";
 
-const Testimonial = ({ comments }) => {
+const Testimonial: React.FC<{ comments: any[] }> = ({ comments }) => {
   console.log(
     comments.map((e) =>
-      e?.fields?.reviews?.content.map((e) => e.content.map((e) => e.value))
+      e?.fields?.reviews?.content.map((e: any) =>
+        e.content.map((e: any) => e.value)
+      )
     ),
     "client"
   );
@@ -91,8 +93,8 @@ const Testimonial = ({ comments }) => {
                     </div>
 
                     <p className="line-clamp-2 sm:line-clamp-none mt-4 text-gray-500">
-                      {e?.fields?.reviews?.content.map((e) =>
-                        e.content.map((e) => e.value)
+                      {e?.fields?.reviews?.content.map((e: any) =>
+                        e.content.map((e: any) => e.value)
                       )}
                     </p>
                   </blockquote>

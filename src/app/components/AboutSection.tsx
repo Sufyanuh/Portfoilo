@@ -2,19 +2,17 @@
 import { createClient } from "contentful";
 import Image from "next/image";
 
-const AboutSection = ({ projects }) => {
+const AboutSection: React.FC<{ projects: any[] }> = ({ projects }) => {
   const skills = [
     { skill: "HTML" },
     { skill: "CSS" },
     { skill: "JavaScript" },
     { skill: "TypeScript" },
-    { skill: "Python" },
     { skill: "React" },
     { skill: "Next.js" },
     { skill: "Tailwind CSS" },
     { skill: "Git" },
     { skill: "GitHub" },
-    { skill: "Jupyter Notebooks" },
   ];
 
   return (
@@ -29,7 +27,7 @@ const AboutSection = ({ projects }) => {
             <h1 className="text-center text-2xl font-bold mb-6 md:text-left">
               Get to know me!
             </h1>
-            {projects.map((e, i) => {
+            {projects?.map((e) => {
               return (
                 <>
                   <div
@@ -97,5 +95,6 @@ const AboutSection = ({ projects }) => {
     </section>
   );
 };
+
 
 export default AboutSection;
