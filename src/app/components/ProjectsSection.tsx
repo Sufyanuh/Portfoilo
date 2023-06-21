@@ -12,16 +12,19 @@ const ProjectsSection = () => {
       description:
         "Banker Broker is a web app for getting loan for your bussiness built on React Js.",
       image: "/Banker Broker.png",
+      link: "https://bankerbrokeradmin.dev-oa.xyz"
     },
     {
       name: "Ai Realm",
       description: "Ai Realm is a gaming web application built on React Js.",
       image: "/Ai Realm.png",
+      link: 'https://airealmuser.dev-bt.xyz/'
     },
     {
       name: "Verified Calendar",
       description: "Verified Calendar is a Ecommerce site built on React Js.",
       image: "/familyphotos.png",
+      link: 'https://verified.dev-bt.xyz/'
     },
   ];
 
@@ -38,8 +41,12 @@ const ProjectsSection = () => {
             <div key={idx}>
               <SlideUp offset="-300px 0px -300px 0px">
                 <div className="flex flex-col  animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12 my-3">
+
                   <div className="mt-8 md:w-1/2">
-                    <h1 className="text-4xl font-bold mb-6">{project.name}</h1>
+                    <a href={project.link} target='_blank'>
+                      <h1 className="text-4xl font-bold mb-6">{project.name}</h1>
+                    </a>
+
                     <p className="text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
                       {project.description}
                     </p>
@@ -56,14 +63,19 @@ const ProjectsSection = () => {
                     </div>
                   </div>
                   <div className=" md:w-1/2">
-                    <Image
-                      src={project.image}
-                      alt=""
-                      width={1000}
-                      height={1000}
-                      className="rounded-xl shadow-xl hover:opacity-70"
-                    />
+                    <a href={project.link} target='_blank'>
+
+
+                      <Image
+                        src={project.image}
+                        alt=""
+                        width={1000}
+                        height={1000}
+                        className="rounded-xl shadow-xl hover:opacity-70"
+                      />
+                    </a>
                   </div>
+
                 </div>
               </SlideUp>
             </div>
