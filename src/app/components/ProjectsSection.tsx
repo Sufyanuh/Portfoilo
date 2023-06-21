@@ -63,7 +63,7 @@ const ProjectsSection = () => {
                     </div>
                   </div>
                   <div className=" md:w-1/2">
-                    <a href={project.link} target='_blank'>
+                    <a href={project.link} target='_blank' rel="noreferrer noopener">
 
 
                       <Image
