@@ -43,7 +43,7 @@ const ProjectsSection = () => {
                 <div className="flex flex-col  animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12 my-3">
 
                   <div className="mt-8 md:w-1/2">
-                    <a href={project.link} target='_blank' rel="noreferrer">
+                    <a href={project.link} target='_blank' rel="noreferrer noopener">
                       <h1 className="text-4xl font-bold mb-6">{project.name}</h1>
                     </a>
 
